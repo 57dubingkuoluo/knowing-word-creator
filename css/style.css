@@ -1,0 +1,275 @@
+/* 儿童识字小报生成器 - 样式 */
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #FF6B6B;
+  --primary-hover: #FF5252;
+  --secondary-color: #4ECDC4;
+  --secondary-hover: #45B7AA;
+  --text-color: #333;
+  --text-light: #666;
+  --bg-color: #FFF9F0;
+  --card-bg: #FFFFFF;
+  --border-color: #E0E0E0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 头部 */
+.header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.header h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+/* 主要区域 */
+.main {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* 输入框 */
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+/* 按钮 */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-hover);
+}
+
+.btn-large {
+  padding: 16px 40px;
+  font-size: 18px;
+}
+
+/* API Key 区域 */
+.api-key-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.api-key-wrapper .input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.api-key-display {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* 模式切换 */
+.mode-toggle {
+  margin-bottom: 16px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+}
+
+/* 预置主题卡片 */
+.preset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.preset-card {
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.preset-card:hover {
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.preset-card.active {
+  border-color: var(--primary-color);
+  background: #FFF0F0;
+}
+
+.preset-theme {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 4px;
+}
+
+.preset-title {
+  font-size: 14px;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.preset-pinyin {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* 自定义输入 */
+.custom-inputs {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 操作区域 */
+.action-section {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.status-text {
+  margin-top: 12px;
+  color: var(--text-light);
+  font-size: 14px;
+  min-height: 20px;
+}
+
+/* 结果展示 */
+.result-section h2 {
+  text-align: center;
+}
+
+.result-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result-image {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* 底部 */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .preset-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+}
